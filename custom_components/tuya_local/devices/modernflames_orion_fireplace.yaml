@@ -169,20 +169,10 @@ entities:
             value: Three
   - entity: light
     translation_key: flame
-    category: config
     dps:
-      - id: 104
-        name: brightness
-        type: string
-        mapping:
-          - dps_val: "OFF"
-            value: 0
-          - dps_val: DEFAULT
-            value: 82
-          - dps_val: MEDIUM
-            value: 164
-          - dps_val: HIGH
-            value: 255
+      - id: 1
+        name: switch
+        type: boolean
       - id: 102
         name: named_color
         type: string
@@ -199,6 +189,23 @@ entities:
             value: purple
           - dps_val: WHITE
             value: white
+  - entity: select
+    name: Flame sound
+    icon: "mdi:volume-high"
+    category: config
+    dps:
+      - id: 104
+        type: string
+        name: option
+        mapping:
+          - dps_val: "OFF"
+            value: "Off"
+          - dps_val: DEFAULT
+            value: Low
+          - dps_val: MEDIUM
+            value: Medium
+          - dps_val: HIGH
+            value: High
   - entity: select
     name: Flame speed
     icon: "mdi:fire"
